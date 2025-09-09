@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Travel Recommendations</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link.active {
+            font-weight: 700;
+            color: #1a202c;
+            border-bottom: 2px solid #4a5568;
+        }
+        .recommendation-card {
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #4c51bf;
+            box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.2);
+        }
+        .alert-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #48bb78;
+            color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s forwards, fadeOut 3s 2s forwards;
+        }
+        @keyframes slideIn {
+            from { top: -50px; opacity: 0; }
+            to { top: 20px; opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-2xl font-bold text-gray-900">Wanderlust</a>
+            </div>
+            <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                <a href="#home" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">About Us</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact Us</a>
+                <a href="#beach" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Beaches</a>
+                <a href="#temple" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Temples</a>
+                <a href="#country" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Countries</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Home Page -->
+        <section id="home" class="page-content active">
+            <div class="bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-xl p-10 md:p-20 shadow-lg text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Discover Your Next Adventure</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto">
+                    Welcome to Wanderlust, your personal guide to ideal destinations. We help you explore and plan memorable trips based on your unique preferences, providing curated suggestions, seamless navigation, and engaging content.
+                </p>
+            </div>
+
+            <!-- Home page recommendations grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="recommendation-card p-6">
+                    <h2 class="text-2xl font-bold mb-4">Beach Escapes</h2>
+                    <p class="text-gray-600 mb-4">Find your perfect sandy paradise with our top beach recommendations.</p>
+                    <a href="#beach" class="text-purple-600 hover:underline">Explore now →</a>
+                </div>
+                <div class="recommendation-card p-6">
+                    <h2 class="text-2xl font-bold mb-4">Sacred Journeys</h2>
+                    <p class="text-gray-600 mb-4">Discover awe-inspiring temples and spiritual destinations around the world.</p>
+                    <a href="#temple" class="text-purple-600 hover:underline">Explore now →</a>
+                </div>
+                <div class="recommendation-card p-6">
+                    <h2 class="text-2xl font-bold mb-4">Country Spotlights</h2>
+                    <p class="text-gray-600 mb-4">Dive deep into a country with our comprehensive travel guides.</p>
+                    <a href="#country" class="text-purple-600 hover:underline">Explore now →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Page -->
+        <section id="about" class="page-content">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">About Us</h2>
+                <p class="text-lg text-gray-600 mb-4">
+                    At Wanderlust, we believe that the best journeys are the ones that are truly personal. Our user-centric approach ensures that every suggestion is tailored to your unique tastes. We are dedicated to providing seamless navigation and engaging, detailed content to enhance your experience.
+                </p>
+                <p class="text-lg text-gray-600">
+                    Our mission is to empower you with all the information you need to make informed travel decisions and plan the trip of a lifetime. From breathtaking landscapes to rich cultural sites, we've got you covered.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Us Page -->
+        <section id="contact" class="page-content">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Contact Us</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Have a question or a suggestion? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
+                </p>
+                <form id="contactForm">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Beach Recommendation -->
+        <section id="beach" class="page-content">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Beach Recommendation: The Maldives</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    The Maldives is a tropical nation in the Indian Ocean known for its pristine beaches, turquoise lagoons, and extensive reefs. It's the perfect destination for a relaxing getaway and a paradise for divers and snorkelers.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <img src="https://imagedelivery.net/y9EHf1toWJTBqJVsQzJU4g/www.indianholiday.com/2025/06/mudhdhoo-beach_2.jpg/w=750,h=500" alt="A beautiful sandy beach in the Maldives with clear blue water." class="rounded-lg shadow-lg">
+                    <img src="https://images.ctfassets.net/rxqefefl3t5b/2MvpllaTS44GZBPDvxPip6/22fb7211be34011ef52eaff3eb26a77e/shutterstock_444622738.jpg" alt="A serene view of the Maldivian ocean with a water bungalow." class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Temple Recommendation -->
+        <section id="temple" class="page-content">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Temple Recommendation: Angkor Wat, Cambodia</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Angkor Wat is a vast temple complex in Cambodia and the largest religious monument in the world. It is a symbol of Khmer architecture and a spiritual destination that captivates visitors with its intricate carvings and rich history.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <img src="https://lp-cms-production.imgix.net/2025-01/Cambodia-Angkor-Wat-Waj-shutterstockRF312461543-crop.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop" alt="The majestic towers of Angkor Wat at sunrise." class="rounded-lg shadow-lg">
+                    <img src="https://wanderwisdom.com/.image/t_share/MTc0NDk1Mjk1MTA5ODY2ODU2/magical-angkor-wat.jpg" alt="Intricate bas-relief carvings on the walls of Angkor Wat." class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Country Recommendation -->
+        <section id="country" class="page-content">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Country Recommendation: Japan</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Japan is a captivating blend of ancient traditions and modern technology. From the bustling streets of Tokyo to the serene temples of Kyoto and the majestic Mount Fuji, Japan offers a unique and unforgettable cultural experience.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <img src="https://www.datocms-assets.com/101439/1703136003-beautiful-mountain-of-japan-mount-fuji.webp?auto=format&fit=crop&h=800&w=1200/612x612/ef4444/ffffff?text=Mount+Fuji" alt="A panoramic view of Mount Fuji towering over a lake." class="rounded-lg shadow-lg">
+                    <img src="https://media.istockphoto.com/id/1502444888/photo/aerial-view-of-tokyo-cityscape-with-fuji-mountain-in-japan.jpg?s=612x612&w=0&k=20&c=uR79tqwlXspSvmw3mJYXqHgvfN34zVOgPHyEzpeeCCE=" alt="The futuristic skyline of Tokyo at night." class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page-content');
+            const contactForm = document.getElementById('contactForm');
+
+            // Function to show a page and hide others
+            const showPage = (id) => {
+                pages.forEach(page => page.classList.remove('active'));
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                const activePage = document.getElementById(id);
+                if (activePage) {
+                    activePage.classList.add('active');
+                }
+
+                const activeNavLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (activeNavLink) {
+                    activeNavLink.classList.add('active');
+                }
+            };
+
+            // Initial page load based on URL hash or default to home
+            const hash = window.location.hash.substring(1);
+            showPage(hash || 'home');
+
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    showPage(targetId);
+                    // Update URL hash without page reload
+                    history.pushState(null, '', `#${targetId}`);
+                });
+            });
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash.substring(1);
+                showPage(hash || 'home');
+            });
+
+            // Handle form submission
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // In a real application, you would send this data to a server.
+                // For this project, we'll show a success message.
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                console.log('Form Submitted!');
+                console.log(`Name: ${name}`);
+                console.log(`Email: ${email}`);
+                console.log(`Message: ${message}`);
+                
+                // Show custom alert message
+                showAlert('Thank you! Your message has been sent.', 'success');
+                contactForm.reset();
+            });
+
+            // Function to display a custom alert message
+            function showAlert(message) {
+                const alertBox = document.createElement('div');
+                alertBox.className = 'alert-box';
+                alertBox.textContent = message;
+                document.body.appendChild(alertBox);
+
+                // Remove the alert after 4 seconds
+                setTimeout(() => {
+                    alertBox.remove();
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html>
