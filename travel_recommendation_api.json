@@ -7,13 +7,13 @@
         {
           "id": 1,
           "name": "Tokyo, Japan",
-          "imageUrl": "https://placehold.co/400x250/3498db/ffffff?text=Tokyo",
+          "imageUrl": "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-1390815938?_a=BAVAZGID0",
           "description": "A bustling metropolis known for its advanced technology, neon-lit streets, and deep historical roots."
         },
         {
           "id": 2,
           "name": "Kyoto, Japan",
-          "imageUrl": "https://placehold.co/400x250/2ecc71/ffffff?text=Kyoto",
+          "imageUrl": "https://photos.smugmug.com/Kyoto/Honeymoon-in-Kyoto/i-LdmsJPZ/0/26b66d84/L/shutterstock_626644001-L.jpg",
           "description": "Famous for its classical Buddhist temples, gardens, imperial palaces, Shinto shrines, and traditional wooden houses."
         }
       ]
