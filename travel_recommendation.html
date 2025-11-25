@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <!-- Link to the CSS file for styling (assuming you have a styles.css) -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- Internal styles for the card layout, assuming these were in your styles.css or were missing -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 30px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .navbar nav ul li a:hover {
+            color: #ffcc00; /* Highlight color on hover */
+        }
+
+        /* Search Bar and Buttons Styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .search-bar input {
+            padding: 8px 12px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            width: 200px; /* Adjusted width */
+            color: #333;
+        }
+        
+        .search-bar button {
+            padding: 8px 15px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        #searchButton {
+            background-color: #007bff; 
+        }
+        
+        #searchButton:hover {
+            background-color: #0056b3;
+        }
+
+        #resetButton {
+            background-color: #dc3545; /* Red for Reset */
+        }
+        
+        #resetButton:hover {
+            background-color: #c82333;
+        }
+
+        /* Main Content and Results Layout */
+        .hero-section {
+            padding: 50px 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .description {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .book-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .book-button:hover {
+            background-color: #218838;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            font-size: 1.5em; /* Makes icons larger */
+        }
+
+        .social-links a {
+            color: #007bff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Responsive Results Container */
+        .results-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigation Bar with CORRECT Links (Fix Applied Here) -->
+    <header class="navbar">
+        <div class="logo">Travel Explorer</div>
+        <nav>
+            <ul>
+                <li><a href="travel_recommendation.html">Home</a></li>
+                <!-- CORRECTED LINK: Points to the new about_us.html file -->
+                <li><a href="about_us.html">About Us</a></li>
+                <!-- CORRECTED LINK: Points to the new contact_us.html file -->
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- The search bar and buttons -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search countries, temples, or beaches...">
+            <button id="searchButton">Search</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </header>
+
+    <!-- 2. Main Content Section (Hero) -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Explore the Unseen: Your Next Adventure Awaits</h1>
+            
+            <p class="description">
+                Dive into diverse cultures, discover hidden gems, and curate travel experiences that speak to your soul. Start your journey of cultural exploration today.
+            </p>
+
+            <a href="#" class="book-button">Book Now</a>
+
+            <div class="social-links">
+                <a href="#">[Facebook]</a>
+                <a href="#">[Instagram]</a>
+                <a href="#">[Twitter]</a>
+            </div>
+        </div>
+
+        <!-- 3. Recommendation Results Section -->
+        <section id="recommendationResults" class="results-container">
+            <!-- Travel recommendations will be displayed here by JavaScript -->
+        </section>
+    </main>
+
+    <!-- Link to the JavaScript file -->
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

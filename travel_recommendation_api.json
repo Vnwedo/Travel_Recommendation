@@ -1,0 +1,68 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Japan",
+      "cities": [
+        {
+          "id": 1,
+          "name": "Tokyo, Japan",
+          "imageUrl": "https://placehold.co/400x250/3498db/ffffff?text=Tokyo",
+          "description": "A bustling metropolis known for its advanced technology, neon-lit streets, and deep historical roots."
+        },
+        {
+          "id": 2,
+          "name": "Kyoto, Japan",
+          "imageUrl": "https://placehold.co/400x250/2ecc71/ffffff?text=Kyoto",
+          "description": "Famous for its classical Buddhist temples, gardens, imperial palaces, Shinto shrines, and traditional wooden houses."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Australia",
+      "cities": [
+        {
+          "id": 3,
+          "name": "Sydney, Australia",
+          "imageUrl": "https://placehold.co/400x250/f39c12/ffffff?text=Sydney",
+          "description": "Known for the Sydney Opera House, Harbour Bridge, and its vibrant city life and beautiful beaches."
+        },
+        {
+          "id": 4,
+          "name": "Melbourne, Australia",
+          "imageUrl": "https://placehold.co/400x250/e74c3c/ffffff?text=Melbourne",
+          "description": "The cultural capital of Australia, offering fantastic music, art, coffee, and sports."
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "id": 1,
+      "name": "Kinkaku-ji (Golden Pavilion)",
+      "imageUrl": "https://placehold.co/400x250/9b59b6/ffffff?text=Golden+Pavilion",
+      "description": "A Zen Buddhist temple in Kyoto, Japan. Its top two floors are covered in gold leaf."
+    },
+    {
+      "id": 2,
+      "name": "Wat Rong Khun (White Temple)",
+      "imageUrl": "https://placehold.co/400x250/34495e/ffffff?text=White+Temple",
+      "description": "A contemporary, unconventional, white Buddhist temple in Chiang Rai, Thailand."
+    }
+  ],
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Bondi Beach",
+      "imageUrl": "https://placehold.co/400x250/1abc9c/ffffff?text=Bondi+Beach",
+      "description": "One of the world's most famous beaches, known for its golden sands and excellent surfing conditions, located in Sydney, Australia."
+    },
+    {
+      "id": 2,
+      "name": "Copacabana Beach",
+      "imageUrl": "https://placehold.co/400x250/f1c40f/ffffff?text=Copacabana",
+      "description": "A stunning 4km stretch of sand in Rio de Janeiro, Brazil, famous for its lively atmosphere."
+    }
+  ]
+}

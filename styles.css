@@ -1,111 +1,239 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
 }
 
-/* 1 & 2. Navigation Bar and Search Bar */
-.navbar {
-    display: flex; /* Use Flexbox for alignment */
-    justify-content: space-between; /* Space out logo, links, and search */
+/* Base link styling */
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* 2. Common Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* 3. Navigation Bar Consistency (Used by the simplified navbar on About Us/Contact Us) */
+
+/* The main navbar (.navbar) is heavily styled inline in travel_recommendation.html */
+
+/* Styling for the simplified navbar used on About Us/Contact Us pages */
+.navbar-simple {
+    display: flex; 
+    justify-content: flex-start; /* Aligns logo and nav to the left */
     align-items: center;
     background-color: #333;
     padding: 15px 30px;
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.navbar-simple .logo {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.navbar nav ul {
+.navbar-simple nav {
+    margin-left: 50px; /* Space between logo and navigation links */
+}
+
+.navbar-simple nav ul {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-.navbar nav ul li a {
+.navbar-simple nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0 15px;
+    transition: color 0.3s;
 }
 
-.search-bar input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px 0 0 4px;
+.navbar-simple nav ul li a:hover {
+    color: #ffcc00; 
 }
 
-.search-bar button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
-}
 
-/* 3. Main Content Section (Hero) */
-.hero-section {
-    /* Placeholder for the enticing background image */
-    background-image: url('placeholder-travel-image.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 90vh; /* Takes up most of the viewport height */
+/* 4. Contact Us Page Specific Styles (Applied to ensure consistency) */
+.contact-main {
+    padding: 50px 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    /* Optional: Add a subtle overlay for better text readability */
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+    align-items: flex-start;
+    min-height: 80vh;
+    background-color: #f4f7f9;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
+.contact-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
 }
 
-.hero-content h1 {
-    font-size: 3em;
+.form-group {
     margin-bottom: 20px;
 }
 
-.description {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
 }
 
-/* Book Now Button */
-.book-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ff5722; /* A vibrant color for the CTA */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; 
     color: white;
-    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
-.book-button:hover {
-    background-color: #e64a19;
+.submit-button:hover {
+    background-color: #218838;
 }
 
-/* Social Media Links */
-.social-links a {
-    margin: 0 10px;
-    /* You would replace the image tags in HTML with icons (e.g., Font Awesome) for a real site */
+/* 5. About Us Page Specific Styles */
+.about-main {
+    padding: 50px 10%;
+    text-align: center;
 }
 
-.social-links img {
-    width: 30px; /* Adjust size for social icons */
-    height: 30px;
-    border-radius: 50%;
-    /* Add styling to make the icons stand out against the background */
-    border: 2px solid white;
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+}
+.team-member h3 {
+    margin: 10px 0;
+    color: #333;
+}
+.team-member p {
+    color: #555;
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+/* 6. Media Query for Responsiveness */
+@media (max-width: 768px) {
+    /* Home Page Navbar adjustment */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .navbar nav {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav ul li a {
+        padding: 5px 0;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+
+    /* Simplified Navbar adjustment */
+    .navbar-simple {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .navbar-simple nav {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    /* Main Content */
+    .hero-section, .about-main, .contact-main {
+        padding: 30px 5%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    /* Contact Card */
+    .contact-card {
+        padding: 20px;
+    }
 }
