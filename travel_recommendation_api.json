@@ -25,13 +25,13 @@
         {
           "id": 3,
           "name": "Sydney, Australia",
-          "imageUrl": "https://placehold.co/400x250/f39c12/ffffff?text=Sydney",
+          "imageUrl": "https://www.cunard.com/content/dam/cunard/inventory-assets/ports/SYD/yqy.jpg",
           "description": "Known for the Sydney Opera House, Harbour Bridge, and its vibrant city life and beautiful beaches."
         },
         {
           "id": 4,
           "name": "Melbourne, Australia",
-          "imageUrl": "https://placehold.co/400x250/e74c3c/ffffff?text=Melbourne",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbpdbsTwP1XPecbIv8ZSIKo64ygNIVMEIjBQ&s",
           "description": "The cultural capital of Australia, offering fantastic music, art, coffee, and sports."
         }
       ]
@@ -41,13 +41,13 @@
     {
       "id": 1,
       "name": "Kinkaku-ji (Golden Pavilion)",
-      "imageUrl": "https://placehold.co/400x250/9b59b6/ffffff?text=Golden+Pavilion",
+      "imageUrl": "https://imagesdartistes.com/cdn/shop/files/kyoto-kinkakuji-golden-pavilion.webp?v=1711716389",
       "description": "A Zen Buddhist temple in Kyoto, Japan. Its top two floors are covered in gold leaf."
     },
     {
       "id": 2,
       "name": "Wat Rong Khun (White Temple)",
-      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/94/06/af/photo0jpg.jpg?w=900&h=500&s=1",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCaNn6XlSXwkGOuL3B1wF6-Dyv4CLdivR6w&s",
       "description": "A contemporary, unconventional, white Buddhist temple in Chiang Rai, Thailand."
     }
   ],
@@ -55,13 +55,13 @@
     {
       "id": 1,
       "name": "Bondi Beach",
-      "imageUrl": "https://placehold.co/400x250/1abc9c/ffffff?text=Bondi+Beach",
+      "imageUrl": "https://ichef.bbci.co.uk/images/ic/480xn/p0g2lyq7.jpg.webp",
       "description": "One of the world's most famous beaches, known for its golden sands and excellent surfing conditions, located in Sydney, Australia."
     },
     {
       "id": 2,
       "name": "Copacabana Beach",
-      "imageUrl": "https://placehold.co/400x250/f1c40f/ffffff?text=Copacabana",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSezie0V_NBwbbtjs6h8cKNaH0E_bOFxbZBQQ&s",
       "description": "A stunning 4km stretch of sand in Rio de Janeiro, Brazil, famous for its lively atmosphere."
     }
   ]
